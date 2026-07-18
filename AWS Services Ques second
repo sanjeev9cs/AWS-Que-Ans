@@ -1,0 +1,336 @@
+AWS Interview Questions (Structured Format)
+1. Basic AWS Questions
+What is AWS?
+What is Cloud Computing?
+What are the main cloud service models (IaaS, PaaS, SaaS)?
+What is the difference between Public Cloud, Private Cloud, and Hybrid Cloud?
+What is an AWS Region?
+What is an Availability Zone (AZ)?
+Why should we use multiple Availability Zones?
+What is the difference between Scalability and Elasticity?
+What is High Availability?
+What is Fault Tolerance?
+
+
+2. EC2 Questions
+What is EC2?
+What are EC2 instance types?
+What is an AMI?
+What is a Key Pair in EC2?
+What is a Security Group?
+What is the difference between Security Group and NACL?
+What is an Elastic IP?
+What is User Data in EC2?
+What happens when you stop and start an EC2 instance?
+What is the difference between Stop, Start, Reboot, and Terminate?
+
+
+3. EC2 Advanced Questions
+How do you connect to a private EC2 instance?
+What is a Bastion Host?
+What is EC2 Instance Connect?
+What is an Auto Scaling Group (ASG)?
+What are Launch Templates?
+What is a Placement Group?
+What are the types of Placement Groups?
+What is a Spot Instance?
+What is a Reserved Instance?
+What is the difference between On-Demand, Reserved, and Spot Instances?
+
+
+4. VPC and Networking Questions
+What is a VPC?
+What is a Subnet?
+What is the difference between Public and Private Subnet?
+What is an Internet Gateway (IGW)?
+What is a NAT Gateway?
+Why do we use NAT Gateway?
+What is a Route Table?
+What is a CIDR Block?
+What is VPC Peering?
+What is Transit Gateway?
+
+5. VPC Advanced Questions
+Can two VPCs with overlapping CIDR blocks be peered?
+What is the difference between NAT Gateway and NAT Instance?
+How can private instances access the internet?
+How can users access an application hosted in a private subnet?
+What is a VPC Endpoint?
+What is the difference between Gateway Endpoint and Interface Endpoint?
+How do you troubleshoot an EC2 instance that cannot access the internet?
+What is the difference between Stateful and Stateless firewall?
+Are Security Groups Stateful or Stateless?
+Are NACLs Stateful or Stateless?
+
+
+6. Load Balancer Questions
+What is Elastic Load Balancer (ELB)?
+What are the types of Load Balancers in AWS?
+What is an Application Load Balancer (ALB)?
+What is a Network Load Balancer (NLB)?
+What is a Gateway Load Balancer (GWLB)?
+What is the difference between ALB and NLB?
+What is a Target Group?
+What is a Health Check in Load Balancer?
+What happens if one target becomes unhealthy?
+Can one Load Balancer serve multiple applications?
+
+
+7. Auto Scaling Questions
+What is Auto Scaling?
+What is the difference between Vertical Scaling and Horizontal Scaling?
+What is Desired Capacity?
+What is Minimum Capacity?
+What is Maximum Capacity?
+What is a Scaling Policy?
+What is Target Tracking Scaling?
+What is Step Scaling?
+What is Scheduled Scaling?
+How does Auto Scaling work with a Load Balancer?
+
+
+8. Amazon S3 Questions
+What is Amazon S3?
+What is a Bucket?
+What is an Object?
+Is S3 Block Storage or Object Storage?
+What is the maximum size of an S3 object?
+What is Versioning in S3?
+What is a Lifecycle Policy?
+What is a Bucket Policy?
+What is S3 Encryption?
+What are S3 Storage Classes?
+
+
+9. S3 Advanced Questions
+Difference between S3 Standard, S3 IA, Glacier, and Glacier Deep Archive?
+How do you host a static website on S3?
+What is a Pre-signed URL?
+What is S3 Replication?
+What is Cross-Region Replication (CRR)?
+What is Same-Region Replication (SRR)?
+How do you block public access to S3?
+Difference between Bucket Policy and IAM Policy?
+How can you secure sensitive files in S3?
+How do you recover deleted objects in S3?
+
+
+10. IAM Questions
+What is IAM?
+What is an IAM User?
+What is an IAM Group?
+What is an IAM Role?
+What is an IAM Policy?
+Difference between IAM Role and IAM User?
+What is MFA?
+What is Least Privilege Access?
+What is the Root User?
+Why should the Root User not be used for daily tasks?
+
+
+11. IAM Advanced Questions
+How does an IAM Role work with EC2?
+What is a Trust Policy?
+What is a Permissions Policy?
+What is Cross-Account Access?
+What is STS?
+What is AssumeRole?
+What is a Resource-Based Policy?
+Difference between Identity-Based and Resource-Based Policy?
+What is a Permission Boundary?
+What happens when Explicit Deny and Allow both exist?
+
+
+12. RDS Questions
+What is Amazon RDS?
+Which databases are supported by RDS?
+What is Multi-AZ in RDS?
+What is a Read Replica?
+Difference between Multi-AZ and Read Replica?
+What is Automated Backup?
+What is a Snapshot?
+How do you restore an RDS database?
+What is a Parameter Group?
+What is an Option Group?
+
+
+13. RDS Advanced Questions
+Can Read Replica be used for Disaster Recovery?
+Can Multi-AZ improve read performance?
+What happens during RDS Failover?
+How do you make RDS highly available?
+How do you secure RDS?
+How can EC2 connect to an RDS instance in a private subnet?
+What is Amazon Aurora?
+Difference between Aurora and normal RDS?
+What is Aurora Serverless?
+How do you troubleshoot slow database performance?
+
+
+14. Route 53 Questions
+What is Route 53?
+What is DNS?
+What is a Hosted Zone?
+What is an A Record?
+What is a CNAME Record?
+What is an MX Record?
+What is a TXT Record?
+What is an Alias Record?
+Difference between CNAME and Alias?
+What are Route 53 Routing Policies?
+
+
+15. Route 53 Advanced Questions
+What is Latency-Based Routing?
+What is Weighted Routing?
+What is Failover Routing?
+What is Geolocation Routing?
+What is a Health Check in Route 53?
+Can Route 53 route traffic to an S3 website?
+Can Route 53 route traffic to CloudFront?
+Why use Alias Record instead of CNAME?
+How do you configure Domain Failover?
+What happens when DNS TTL is high?
+
+
+16. CloudFront Questions
+What is CloudFront?
+What is a CDN?
+What is an Edge Location?
+What is an Origin?
+What is Cache Behavior?
+What is TTL in CloudFront?
+What is Invalidation?
+How does CloudFront improve performance?
+Can CloudFront serve content from S3?
+Can CloudFront serve content from ALB?
+
+
+17. CloudWatch Questions
+What is CloudWatch?
+What are CloudWatch Metrics?
+What are CloudWatch Logs?
+What is a CloudWatch Alarm?
+What is a Namespace?
+What is a Custom Metric?
+How do you monitor EC2 CPU usage?
+How do you monitor EC2 memory usage?
+Can CloudWatch restart an EC2 instance?
+What is Amazon EventBridge?
+
+
+18. AWS Lambda Questions
+What is AWS Lambda?
+What is Serverless Computing?
+What are Lambda Triggers?
+What programming languages are supported?
+What is Lambda Timeout?
+What is Lambda Memory Size?
+What is a Cold Start?
+What is Concurrency?
+What is Reserved Concurrency?
+How does Lambda connect to a VPC?
+
+
+19. SQS & SNS Questions
+What is Amazon SQS?
+What is Amazon SNS?
+Difference between SQS and SNS?
+What is a Queue?
+What is a Topic?
+What is Message Retention Period?
+What is Visibility Timeout?
+What is a Dead-Letter Queue (DLQ)?
+What is a FIFO Queue?
+Difference between Standard Queue and FIFO Queue?
+
+
+20. Scenario-Based AWS Questions
+Your website is slow globally. What AWS service will you use?
+Your EC2 instance is not reachable through SSH. How will you troubleshoot?
+Your private EC2 needs internet access for updates. What will you configure?
+Your application traffic is increasing. How will you scale it?
+Your database should be highly available. What will you use?
+Your S3 bucket is accidentally public. How will you secure it?
+Your company wants disaster recovery in another Region. What AWS services can help?
+Your application should run even if one AZ fails. How will you design it?
+Users upload files and need temporary private access. What will you use?
+Your EC2 instance needs access to S3 without storing access keys. What will you use?
+
+
+21. Real Interview Scenario Questions
+Design a highly available web application on AWS.
+Design a three-tier architecture on AWS.
+Host a static website using S3 and CloudFront.
+Deploy an application using EC2, ALB, and Auto Scaling.
+Create a private database architecture using RDS.
+Design secure access for developers to private EC2 instances.
+Design a backup strategy for EC2 and RDS.
+Design a logging and monitoring solution.
+Design a cost-optimized architecture.
+Design a disaster recovery architecture.
+
+
+22. Practical Troubleshooting Questions
+EC2 is running but the website is not opening. What will you check?
+SSH is not working. What will you check?
+Load Balancer shows target unhealthy. What will you check?
+Auto Scaling is not launching new instances. What will you check?
+RDS connection is failing. What will you check?
+S3 object access is denied. What will you check?
+CloudFront is showing old content. What will you do?
+Route 53 domain is not resolving. What will you check?
+Lambda is timing out. How will you troubleshoot?
+SQS messages are not being processed. What will you check?
+
+
+23. Advanced Architecture Questions
+How would you design a multi-region application?
+How would you reduce AWS cost for a production workload?
+How would you secure AWS accounts in an organization?
+How would you implement centralized logging?
+How would you design zero-downtime deployment?
+How would you migrate an on-premises database to AWS?
+How would you protect against DDoS attacks?
+How would you design a secure CI/CD pipeline on AWS?
+How would you handle secrets in AWS?
+How would you implement Blue-Green Deployment?
+
+
+24. AWS Security Questions
+What is AWS KMS?
+What is AWS Secrets Manager?
+What is AWS WAF?
+What is AWS Shield?
+What is Amazon GuardDuty?
+What is AWS Security Hub?
+What is AWS CloudTrail?
+Difference between CloudWatch and CloudTrail?
+How do you secure an AWS account?
+What is Encryption at Rest and Encryption in Transit?
+
+
+
+
+what is DR
+backup vs DR 
+Active-Activve arch
+Active-Passive arch
+RTO
+RPO
+Warm standby
+Pilot-light strategy 
+how to test DR 
+Multi-region 
+Visibilty 
+warm throughput
+Cool down period
+signed cookies
+three signed url
+MFA delete
+identity and resorces
+assume load
+prameter group
+trusted intities
+option group
+read replica 
