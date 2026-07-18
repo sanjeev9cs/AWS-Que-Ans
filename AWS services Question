@@ -1,0 +1,382 @@
+EC2 Real-Time Questions
+Your EC2 instance is running, but the website is not opening. What will you check?
+SSH is not working on EC
+
+2. What are possible reasons?
+You lost the .pem key file. How can you access the EC2 instance?
+EC2 CPU is always above 90%. What will you do?
+How do you increase disk size of a running EC2 instance?
+What is the difference between EBS-backed and instance-store-backed EC2?
+What happens to data when an EC2 instance is stopped?
+What happens to data when an EC2 instance is terminated?
+How do you attach one EBS volume to another EC2 instance?
+Can one Elastic IP be attached to multiple EC2 instances?
+How do you migrate EC2 from one region to another?
+How do you take backup of an EC2 instance?
+What is the difference between AMI and snapshot?
+How do you automate package installation when EC2 launches?
+Why should we avoid using root user access on EC2?
+
+2. VPC Deep Questions
+Explain the complete flow when a user accesses an EC2 instance in a public subnet.Explain the complete flow when a private EC2 accesses the internet.What is the role of route table in VPC?
+Can a subnet be associated with multiple route tables?
+Can a route table be associated with multiple subnets?
+What is the difference between local route and internet route?
+Why does every VPC have a local route?
+What is the difference between public IP and Elastic IP?
+Can private subnet instances have public IP?
+Why do we place databases in private subnets?
+What happens if a public subnet does not have a route to Internet Gateway?
+What happens if EC2 has public IP but security group blocks port 80?
+What happens if security group allows traffic but NACL denies it?
+What is ephemeral port?
+Why are ephemeral ports important in NACL?
+
+3. Security Group and NACL Questions
+Security group is stateful. What does it mean?
+NACL is stateless. What does it mean?
+Can security group explicitly deny traffic?
+Can NACL explicitly deny traffic?
+Which one is applied at instance level?
+Which one is applied at subnet level?
+If security group allows port 22 but NACL denies port 22, will SSH work?
+If NACL allows port 80 but security group denies port 80, will website open?
+Can multiple security groups be attached to one EC2 instance?
+Can one security group be attached to multiple EC2 instances?
+
+4. Load Balancer Scenario Questions
+ALB target is unhealthy. What will you check?
+Website opens directly on EC2 but not through Load Balancer. Why?
+Load Balancer is working, but only one instance is receiving traffic. Why?
+What is sticky session?
+When should we use sticky session?
+What is path-based routing?
+What is host-based routing?
+Can one ALB route traffic to multiple target groups?
+Can ALB forward traffic to Lambda?
+Can NLB handle TCP traffic?
+Why is NLB faster than ALB?
+When would you choose NLB over ALB?
+Can ALB be internal?
+What is cross-zone load balancing?
+What happens if all targets behind a load balancer are unhealthy?
+
+5. Auto Scaling Real-Time Questions
+Auto Scaling Group is not launching new instances. What will you check?
+New instance is launching but not joining target group. Why?
+Auto Scaling launches instances, but they become unhealthy. Why?
+What is cooldown period?
+What is health check grace period?
+What is desired capacity?
+What happens if desired capacity is less than minimum capacity?
+Can Auto Scaling terminate unhealthy instances?
+How does Auto Scaling work with ALB?
+What metrics can be used for scaling?
+Can we scale based on custom CloudWatch metrics?
+What is predictive scaling?
+What is scheduled scaling?
+What is dynamic scaling?
+What happens if maximum capacity is reached?
+
+6. S3 Practical Questions
+S3 file is showing Access Denied. What will you check?
+How do you make an S3 bucket private?
+How do you give temporary access to a private S3 object?
+What is a pre-signed URL?
+How do you host a static website on S3?
+Can S3 host a dynamic website?
+How do you protect S3 data from accidental deletion?
+What is S3 versioning?
+What is MFA delete?
+What is lifecycle rule?
+How do you automatically move old files to Glacier?
+What is S3 replication?
+Can replication happen without versioning?
+Difference between Cross-Region Replication and Same-Region Replication?
+How do you encrypt S3 objects?
+
+7. IAM Deep Questions
+What happens if IAM policy has both Allow and Deny?
+What is explicit deny?
+What is implicit deny?
+What is the principle of least privilege?
+Why should access keys not be stored inside code?
+How can EC2 access S3 without access keys?
+What is IAM role?
+What is IAM instance profile?
+What is trust relationship?
+What is AssumeRole?
+What is STS?
+How do you give temporary access to another AWS account?
+What is cross-account IAM role?
+What is permission boundary?
+What is the difference between managed policy and inline policy?
+
+8. RDS Real-Time Questions
+Application cannot connect to RDS. What will you check?
+RDS is slow. How will you troubleshoot?
+What is Multi-AZ deployment?
+Does Multi-AZ improve read performance?
+What is Read Replica?
+Does Read Replica improve high availability?
+Difference between backup and snapshot?
+What happens during RDS failover?
+Can RDS be placed in a public subnet?
+Should production RDS be public or private?
+How do you encrypt RDS?
+How do you restore RDS from snapshot?
+How do you migrate MySQL database to RDS?
+How do you reduce RDS cost?
+How do you monitor RDS performance?
+
+9. Route 53 Scenario Questions
+Domain is not resolving. What will you check?
+Website opens using IP but not domain. Why?
+What is hosted zone?
+What is public hosted zone?
+What is private hosted zone?
+What is TTL?
+What happens if TTL is very high?
+Difference between A record and CNAME record?
+Difference between CNAME and Alias record?
+Why is Alias better for AWS resources?
+What is failover routing?
+What is weighted routing?
+What is latency routing?
+What is geolocation routing?
+How can Route 53 help in disaster recovery?
+
+10. CloudFront Advanced Questions
+Why use CloudFront in front of S3?
+Why use CloudFront in front of ALB?
+What is origin?
+What is cache behavior?
+What is cache invalidation?
+CloudFront is showing old content. What will you do?
+What is Origin Access Control?
+How do you restrict direct S3 access and allow only CloudFront?
+What is signed URL?
+What is signed cookie?
+Difference between edge location and region?
+Can CloudFront cache dynamic content?
+How does CloudFront reduce latency?
+How does CloudFront help with security?
+What is field-level encryption?
+
+11. CloudWatch and CloudTrail Questions
+Difference between CloudWatch and CloudTrail?
+What are CloudWatch metrics?
+What are CloudWatch logs?
+What is CloudWatch alarm?
+How do you monitor EC2 memory usage?
+Why is memory usage not visible by default for EC2?
+What is CloudWatch agent?
+What is log group?
+What is log stream?
+What is custom metric?
+What is EventBridge?
+How do you trigger Lambda from CloudWatch/EventBridge?
+How do you monitor application logs?
+How do you create alarm for high CPU?
+How do you detect who deleted an EC2 instance?
+
+12. Lambda Scenario Questions
+Lambda is timing out. What will you check?
+Lambda is failing only sometimes. Why?
+What is cold start?
+How do you reduce cold start?
+What is Lambda concurrency?
+What is reserved concurrency?
+What is provisioned concurrency?
+How does Lambda connect to RDS?
+What happens when Lambda runs inside a VPC?
+Can Lambda access private subnet resources?
+Can Lambda be triggered by S3?
+Can Lambda be triggered by SQS?
+What is Lambda dead-letter queue?
+How do you debug Lambda errors?
+When should you not use Lambda?
+
+13. SQS, SNS, and EventBridge Questions
+Difference between SQS and SNS?
+Difference between SNS and EventBridge?
+What is message queue?
+What is pub/sub model?
+What is visibility timeout?
+What is dead-letter queue?
+What is FIFO queue?
+What is message deduplication?
+Can SQS trigger Lambda?
+Can SNS send messages to SQS?
+Why use SQS between two services?
+How does SQS improve fault tolerance?
+What happens if a consumer fails to process a message?
+What is long polling?
+What is message retention?
+
+14. ECS, ECR, and Fargate Questions
+What is ECS?
+What is ECR?
+What is Fargate?
+Difference between ECS and EKS?
+Difference between ECS EC2 launch type and Fargate launch type?
+What is ECS cluster?
+What is task definition?
+What is ECS service?
+What is container health check?
+How do you deploy Docker container on ECS?
+How does ECS work with ALB?
+How do you store Docker images in AWS?
+How do you update ECS service?
+How do you scale ECS tasks?
+How do you troubleshoot ECS task not starting?
+
+15. EKS Questions
+What is EKS?
+Why use EKS instead of self-managed Kubernetes?
+What is node group?
+What is managed node group?
+What is Fargate profile in EKS?
+How does EKS integrate with IAM?
+What is IAM role for service account?
+How do pods access AWS services securely?
+How does LoadBalancer service work in EKS?
+What is AWS Load Balancer Controller?
+How do you scale pods in EKS?
+How do you scale nodes in EKS?
+What is Cluster Autoscaler?
+What is HPA?
+How do you troubleshoot pod pending issue in EKS?
+
+
+17. AWS Security Questions
+How do you secure AWS root account?
+Why should MFA be enabled?
+What is AWS Organizations?
+What is Service Control Policy?
+What is AWS Config?
+What is GuardDuty?
+What is Security Hub?
+What is Inspector?
+What is Macie?
+What is AWS WAF?
+What is AWS Shield?
+Difference between Shield Standard and Shield Advanced?
+How do you protect an application from SQL injection?
+How do you protect against DDoS?
+How do you audit user activity in AWS?
+
+18. KMS and Secrets Questions
+What is AWS KMS?
+What is CMK/KMS key?
+What is symmetric key?
+What is asymmetric key?
+What is envelope encryption?
+What is AWS Secrets Manager?
+Difference between Secrets Manager and Parameter Store?
+How do you rotate database passwords automatically?
+How do you encrypt EBS volume?
+How do you encrypt S3 bucket?
+How do you encrypt RDS?
+What is key policy?
+Difference between key policy and IAM policy?
+Can KMS key be deleted immediately?
+What happens if KMS key is disabled?
+
+19. Cost Optimization Questions
+How do you reduce EC2 cost?
+How do you reduce S3 cost?
+How do you reduce RDS cost?
+What is Reserved Instance?
+What is Savings Plan?
+What is Spot Instance?
+When should we use Spot Instance?
+When should we avoid Spot Instance?
+What is AWS Budgets?
+What is Cost Explorer?
+What is Trusted Advisor?
+How do you find unused EBS volumes?
+How do you find idle load balancers?
+How do you control AWS spending?
+How do you design cost-effective architecture?
+
+20. Disaster Recovery Questions
+What is disaster recovery?
+What is RTO?
+What is RPO?
+Difference between backup and disaster recovery?
+What is pilot light strategy?
+What is warm standby?
+What is active-active architecture?
+What is active-passive architecture?
+How do you design multi-region DR?
+How do you replicate S3 data across regions?
+How do you replicate RDS across regions?
+How does Route 53 help in DR?
+How do you test disaster recovery?
+What is backup retention?
+What is AWS Backup?
+
+21. Three-Tier Architecture Questions
+Explain three-tier architecture in AWS.Which layer should be public?
+Which layer should be private?
+Where should Load Balancer be placed?
+Where should EC2 application servers be placed?
+Where should RDS be placed?
+How does user traffic flow in three-tier architecture?
+Why should database not be public?
+How do private app servers access internet?
+How do developers access private EC2 instances?
+How do you make the architecture highly available?
+How do you make it scalable?
+How do you make it secure?
+How do you monitor it?
+How do you reduce cost in this architecture?
+
+22. Real Interview Design Questions
+Design a highly available WordPress website on AWS.Design Netflix-like video streaming architecture.Design image upload and processing system.Design file sharing system using S3.Design e-commerce application on AWS.Design banking application with high security.Design application for 1 million users.Design multi-region web application.Design serverless backend using Lambda and API Gateway.Design microservices architecture on AWS.Design CI/CD pipeline for Docker app.Design log monitoring system.Design secure private network for company apps.Design backup and restore strategy.Design cost-optimized startup architecture.
+
+23. Tricky AWS Questions
+Can an EC2 instance be in multiple subnets?
+Can a subnet span multiple Availability Zones?
+Can a security group span multiple VPCs?
+Can a VPC span multiple regions?
+Can an EBS volume be attached across regions?
+Can an EBS volume be attached to multiple EC2 instances?
+Can S3 bucket name be duplicated in another AWS account?
+Can one IAM role be attached to multiple EC2 instances?
+Can one EC2 have multiple IAM roles?
+Can RDS be accessed without internet?
+Can private EC2 access S3 without NAT Gateway?
+Can CloudFront be used with private S3?
+Can Route 53 route traffic based on latency?
+Can Auto Scaling work without Load Balancer?
+Can Lambda run continuously for hours?
+
+
+
+24. Must-Know One-Line Answers
+Question
+One-line Answer
+SG vs NACL
+SG is stateful and instance-level, NACL is stateless and subnet-level.
+IGW vs NAT Gateway
+IGW allows public internet access, NAT allows private instances to access internet outbound.
+ALB vs NLB
+ALB works at Layer 7, NLB works at Layer 
+
+4.
+Multi-AZ vs Read Replica
+Multi-AZ is for HA, Read Replica is for read scaling.
+CloudWatch vs CloudTrail
+CloudWatch monitors performance, CloudTrail records API activity.
+IAM User vs Role
+User is permanent identity, role gives temporary permissions.
+S3 vs EBS
+S3 is object storage, EBS is block storage.
+Vertical vs Horizontal Scaling
+Vertical means bigger server, horizontal means more servers.
+RTO vs RPO
+RTO is recovery time, RPO is acceptable data loss.
+Public vs Private Subnet
+Public subnet has route to IGW, private subnet does not. 
